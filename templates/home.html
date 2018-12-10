@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}home.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+
+<div id="content_home" width:1920px;>
+
+    <div id="homeimg">
+        <a href="/"><img src="{% static 'img/django-actor-big.jpg' %}" style="height:256px;"/></a>
+        <h4 style="margin: 0;">This is DOOSAN BEARS Web Site.</h4>
+    </div>
+
+    <hr style="margin: 10px 0;">
+    <div id="imgwrap">
+        <div id="leftimg">
+                <a href="/"><img src="{% static 'img/doosan1.jpg' %}" style="height:256px;" width="150px;" height="250px;" alt =""/></a>
+        </div>
+        <div id="texttable">
+            <table id="applist">
+                <h2>Select Application</h2>
+
+                <tr>
+                <td><b><i><a href="{% url 'bookmark:index'%}">SHOP</a></i><b></td>
+                <td></td>
+                <td id="Edit"><i><a href="#">Add</a></i></td>
+                <td id="Edit"><i><a href="#">Change</a></i></td>
+                </tr>
+
+                <tr>
+                <td><b><i><a href="{% url 'blog:index' %}">NEWS</a></i><b></td>
+                <td></td>
+                <td id="Edit"><i><a href="#">Add</a></i></td>
+                <td id="Edit"><i><a href="#">Change</a></i></td>
+                </tr>
+
+                <tr>
+                <td><b><i><a href="#">PHOTO</a></i><b></td>
+                <td></td>
+                <td id="Edit"><i><a href="#">Add</a></i></td>
+                <td id="Edit"><i><a href="#">Change</a></i></td>
+                </tr>
+             </table>
+        </div>     
+    </div>
+    
+</div>
+{% endblock content %}
+
+{% block footer %}
+<div id="footer">
+    &copy; HJ_LEE   2018
+</div>
+{% endblock footer %}
